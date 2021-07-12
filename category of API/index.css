@@ -1,0 +1,41 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgreen;
+}
+
+.my-api { /*each of the api div */
+    display: grid;
+    grid-template-rows: 3rem 1rem 4rem 3rem; /* each div authomatically takes a row,you can then specify for column below*/
+    grid-template-columns: repeat(3, calc(100% / 3));
+    background-color: lightblue;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.my-api-name {
+    grid-column: span 3; /* 1st colum & cover 3 columns */
+    text-align: center;
+    padding: 0.3rem;
+    font-size: 1.3rem;
+}
+.my-api-description {
+    grid-column: 1 / span 3; /* 2nd colum & cover 3 columns */
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.1rem;
+    grid-row-start: 3;
+    overflow-y: auto;
+}
+.my-api-auth {
+    grid-row-start: 4; /* 4th row */
+    grid-column: 1 / span 1; /* starts at 2nd colum & cover 1 columns */
+    text-align: center;
+    font-size: 1.3rem;
+}
+.my-api-https {
+    grid-row-start: 4; /* 4th row */
+    grid-column: 3 / span 1; /* starts at 4th colum & cover 1 columns */
+    text-align: center;
+    font-size: 1.3rem;
+}
